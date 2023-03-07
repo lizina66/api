@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-03-07 17:28:04
+# 创建时间：2023-03-07 17:40:53
 # 使用模版：V2RaySE 默认模版
 # 节点数量：2
 ####################################
@@ -21,7 +21,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"bt.lizi.moe:1838","type":"vmess","server":"bt.lizi.moe","port":1838,"cipher":"auto","uuid":"02fb0494-20ef-4c5c-a324-bd4189e7682f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/mnqMo06K/","headers":{"host":"bt.lizi.moe"}}}
+  - {"name":"bt.lizi.moe:443","type":"vmess","server":"bt.lizi.moe","port":443,"cipher":"auto","uuid":"02fb0494-20ef-4c5c-a324-bd4189e7682f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/mnqMo06K/","headers":{"host":"bt.lizi.moe"}}}
   - {"name":"192.3.236.39:8888","type":"vmess","server":"192.3.236.39","port":8888,"cipher":"auto","uuid":"fce607f6-86b0-4e38-a40a-9cfd9b32dc21","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
@@ -29,7 +29,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
   - name: ♻️ 自动选择
     type: url-test
@@ -37,7 +37,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
   - name: 🌍 国外媒体
     type: select
@@ -45,28 +45,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
   - name: 🎯 全球直连
     type: select
@@ -90,7 +90,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - bt.lizi.moe:1838
+      - bt.lizi.moe:443
       - 192.3.236.39:8888
 
 rules:
