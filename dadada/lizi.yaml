@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-03-07 14:46:19
+# 创建时间：2023-03-07 15:03:34
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：2
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,46 +21,53 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"apiapi.lizi.moe:443","type":"vmess","server":"apiapi.lizi.moe","port":443,"cipher":"auto","uuid":"819f3923-7393-45f6-b1a3-ba21f6f6b51d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aVCWRN84/","headers":{"host":"apiapi.lizi.moe"}}}
+  - {"name":"ftp.lizi.moe:443","type":"vmess","server":"ftp.lizi.moe","port":443,"cipher":"auto","uuid":"8a4c04aa-9348-47d3-8720-3cc79fbefd02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/6PVHF4gG/"}}
+  - {"name":"192.3.236.39:8888","type":"vmess","server":"192.3.236.39","port":8888,"cipher":"auto","uuid":"fce607f6-86b0-4e38-a40a-9cfd9b32dc21","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -83,7 +90,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - apiapi.lizi.moe:443
+      - ftp.lizi.moe:443
+      - 192.3.236.39:8888
 
 rules:
 # 本地/局域网地址
