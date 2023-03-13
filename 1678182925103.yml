@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-03-10 15:32:23
+# 创建时间：2023-03-14 01:22:18
 # 使用模版：V2RaySE 默认模版
 # 节点数量：3
 ####################################
@@ -21,60 +21,60 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"192.3.236.39:8888","type":"vmess","server":"192.3.236.39","port":8888,"cipher":"auto","uuid":"1c22179b-5c96-4da0-a2a8-359cba215e94","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"Argo_xray_trojan","type":"trojan","server":"generates-guitar-comparing-un.trycloudflare.com","port":443,"udp":true,"password":"ef0a75a6-bd97-11ed-afa1-0242ac120002","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/trojan","headers":{"host":"generates-guitar-comparing-un.trycloudflare.com"}}}
+  - {"name":"192.3.236.39:8888","type":"vmess","server":"192.3.236.39","port":8888,"cipher":"auto","uuid":"5ce3e93b-7d1a-4973-8b89-b43516724d13","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"ftp.lizi.buzz:443","type":"vmess","server":"ftp.lizi.buzz","port":443,"cipher":"auto","uuid":"ef59760b-92d8-4d77-8e19-08e36bd31ca4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Vmx4tBCK/","headers":{"host":"ftp.lizi.buzz"}}}
-  - {"name":"Argo_xray_vmess","type":"vmess","server":"generates-guitar-comparing-un.trycloudflare.com","port":443,"cipher":"auto","uuid":"ef0a75a6-bd97-11ed-afa1-0242ac120002","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess?ed=2048","headers":{"host":"generates-guitar-comparing-un.trycloudflare.com"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,9 +97,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - Argo_xray_trojan
       - 192.3.236.39:8888
       - ftp.lizi.buzz:443
-      - Argo_xray_vmess
 
 rules:
 # 本地/局域网地址
