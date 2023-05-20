@@ -24,4 +24,4 @@ function startSakura() {
 window.onresize = function () { var canvasSnow = document.getElementById('canvas_snow'); }
 img.onload = function () { startSakura(); }
 function stopp() { if (staticx) { var child = document.getElementById("canvas_sakura"); child.parentNode.removeChild(child); window.cancelAnimationFrame(stop); staticx = false; } else { startSakura(); } }
-console.log("\n %c 你好樱花世界！www.lizina.top%c ","color:#fff;background:linear-gradient(90deg,#FFC0CB,#FFC0CB);padding:5px 0;","color:#000;background:linear-gradient(90deg,#FFC0CB,#ffffff);padding:5px 10px 5px 0px;");
+console.log("\n %c 你好樱花世界！www.mwm.moe%c ","color:#fff;background:linear-gradient(90deg,#FFC0CB,#FFC0CB);padding:5px 0;","color:#000;background:linear-gradient(90deg,#FFC0CB,#ffffff);padding:5px 10px 5px 0px;");
